@@ -1,0 +1,73 @@
+
+<div class="index-page-logs">
+
+	<h1>Guide</h1>
+	<hr>
+	<blockquote>
+		<p> 你选择的方案为： jquery + webpack
+		<%if(includePgBridge){%>
+		+ PGBridge + PGTool
+		<%}%>
+		<%if(includeCommonTool){%>
+		+ PGCommon
+		<%}%>
+		<%if(includeImageHandles){%>
+		+ PGBridge + PGTool
+		<%}%>
+		 </p>
+	</blockquote>
+	<hr>
+	<h4>开始你的项目</h4>
+	<p>开始一个项目只需要执行下面这条命令</p>
+	<pre><code> npm run dev</code></pre>
+	<hr>
+	<h4>访问你的项目</h4>
+	<p>默认url是   
+		<a href="http://localhost:8080">  http://localhost:8080</a> 或者 
+		<a href="http://localhost:8080#index">   http://localhost:8080#index</a>
+	</p>
+	<hr>
+	<h4>编辑你的项目</h4>
+	<p>首先#index对应的页面在app/page/index/，文件夹中有三个文件,</p>
+	<ul>
+	<li>index.js</li>
+	<li>index.html</li>
+	<li>index.less</li>
+	</ul>
+	<p>修改他们就会自动更新</p>
+	<hr>
+	<h4>新增一个页面</h4>
+	<p>新增一个页面，会自动帮你添加路由
+	新增页面也只需要一个命令</p>
+	<pre><code>node createPage [pageName]</code></pre>
+	<p>如：Node createPage list
+	在app/page下会自动生成该目录</p>
+	<p>同样的通过
+		<a href="http://localhost:8080#list">   http://localhost:8080#list  </a>  来访问就可以了
+	</p>
+	<p>
+		<strong>路由还支持多级路由</strong>
+	</p>
+	<pre><code>node createPage [pageName] [dirName]</code></pre>
+	
+	<p>其中dirName为已经存在的路径名，此为相对路径，</p>
+	<p>相对于app/page, 如上例子，在list下面创建detail页面；</p>
+	<p>
+		<strong >eg :node createPage detail list</strong>
+	</p>
+	<p>然后就可以通过
+		<a href="http://localhost:8080#list">  http://localhost:8080#list_detail</a>    来访问了
+	</p>
+	<hr>
+	<h4>还有些建议使用规范~</h4>
+	<ul>
+		<li>common/js  : 存放共有js文件，如PGTool.js</li>
+		<li>common/lib : 存放共有库文件，如jquery.js</li>
+		<li>page : 存放页面内容，html,css ,js在一个文件夹下,样式文件使用less添加css的命名空间，避免样式污染，</li>
+		<li>resource/css : 存放公共css（非页面使用级别）</li>
+		<li>resource/font : 公共字体资源</li>
+		<li>resource/font : 公共图片资源</li>
+		<li>resource/widget : 其他组件，可以被Page调用，如alert组件</li>
+	</ul>
+
+</div>
