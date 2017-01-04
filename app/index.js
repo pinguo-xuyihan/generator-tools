@@ -396,7 +396,7 @@ if (appExist) {
             me.includeReact    = hasFeature(features, 'includeReact');
             me.includeVue      = hasFeature(features, 'includeVue');
             me.includeJquery   = hasFeature(features, 'includeJquery');
-
+            me.supportKits     = hasFeature(features, 'supportKits');
             me.exitProcess     = hasFeature(features, 'exitProcess');
 
             me.includeReflux  = '';
@@ -418,8 +418,10 @@ if (appExist) {
                 var reactOptions   = answers.reactOptions;
 
                 me.noDataFlow     = hasFeature(reactOptions, 'noDataFlow');
-                me.includeReflux  = hasFeature(reactOptions, 'includeReflux');
-                me.includeRedux   = hasFeature(reactOptions, 'includeRedux');
+                if(!me.noDataFlow) {
+                    me.includeReflux  = hasFeature(reactOptions, 'includeReflux');
+                    me.includeRedux   = hasFeature(reactOptions, 'includeRedux'); 
+                }
                 me.includeJqueryAPI   = hasFeature(reactOptions, 'includeJqueryAPI');
 
             } 
@@ -430,13 +432,12 @@ if (appExist) {
 
                 me.noTemplate     = hasFeature(fontTemplate, 'noTemplate');
                 me.includeHandlebars  = hasFeature(fontTemplate, 'includeHandlebars');
-
+                
             }
 
             if(me.includeVue){
 
                 var vueOptions   = answers.vueOptions;
-                me.supportKits     = hasFeature(vueOptions, 'supportKits');
             }
 
             if(me.supportKits){
@@ -444,11 +445,6 @@ if (appExist) {
                 me.includePgBridge = hasFeature(commonKits, 'includePgBridge');
                 me.includeCommonTool = hasFeature(commonKits, 'includeCommonTool');
                 me.includeImageHandles = hasFeature(commonKits, 'includeImageHandles');
-
-                console.log(includePgBridge);
-                console.log(includeCommonTool);
-                console.log(includeImageHandles);
-                return;
             }
 
             if(this.includeJquery || this.includeVue){
