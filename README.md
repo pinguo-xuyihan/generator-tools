@@ -67,17 +67,19 @@
  
  ###脚手架使用
  
- 
+                 
+               
+         
+         
 创建页面
-        
-         
-                 node createPage [pageName] [relativePath]
+
+               node createPage [pageName] [relativePath]
+       
      
-     
-创建组件 
-             
-             
-                 node createWidget [WidgetName] 
+创建组件      
+
+           
+                node createWidget [WidgetName] 
      
      
   
