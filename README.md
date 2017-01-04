@@ -15,11 +15,14 @@
      
 目前还是调试版本，所以请直接下载git项目，然后在项目目录下执行
 
-     npm install   
+          npm install   
     
+
+
 项目安装依赖之后执行
 
-     npm link 
+    
+         npm link 
      
 ####创建一个项目
   
