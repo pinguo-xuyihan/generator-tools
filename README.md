@@ -1,7 +1,7 @@
 构建工具负责提供整体解决方案，基于webpack, 分别包含jquery，react和vue三种方案；
 每个方案中包含依赖资源下载，资源引入方式，目录规范，编码规范，并且针对每个项目都提供了脚手架，方便快速开发
 
-####环境安装
+###环境安装
   
  - 安装node 
      
@@ -24,13 +24,13 @@
     
        npm link 
      
-####创建一个项目
+###创建一个项目
   
 - mkdir Pro
 - cd pro 
 - yo pg-tools 
 
-####启动项目
+###启动项目
    
     npm run dev 
 
@@ -41,11 +41,11 @@
     npm run pro 
     
     
-####访问项目
+###访问项目
 
 默认路由都是localhost:8080/#index 
 
-####调试 
+###调试 
 在源代码中可以直接debugger，断点会停在源代码中，而不是编译之后的bundle文件中，这个是依赖webpack中sourceMap；
 
 ##JQuery
