@@ -53,25 +53,26 @@
  - 包含前端路由
  - 自选前端模板（目前只推荐handlebars，支持不包含模板方案）
  - 脚手架，用于创建页面(包含路由)，组件(widget)
- - es6（默认支持，建议使用）
-
+ - es6（默认es5，建议使用）
+ - 通用套件(PGTools PGCommon PGClip)
+ 
  ###目录规范
  - common/js  : 存放共有js文件，如PGTool.js
  - common/lib : 存放共有库文件，如jquery.js
  - page : 存放页面内容，html,css，js在一个文件夹下,样式文件使用less添加css的命名空间，避免样式污染，
  - resource/css : 存放公共css（非页面使用级别）
  - resource/font : 公共字体资源
- - resource/font : 公共图片资源
+ - resource/images : 公共图片资源
  - widget : 其他组件，可以被Page调用，如menu组件
  
  ###脚手架使用
          
          
-          node createPage [pageName] [relativePath] [es5/es6]
+             node createPage [pageName] [relativePath]
      
      
      
-             node createWidget [WidgetName] [es5/es6]
+             node createWidget [WidgetName] 
      
      
   
@@ -84,11 +85,11 @@
   - 自选数据流库，（包含reflux和redux，支持不选择）
   - 热更新
   - react-router 
-  - es6 
+  - es6(默认es6,兼容es5)
   - 组件脚手架
   - reflux  or redux 
   - jquery  as  API
-  - 通用套件 
+  - 通用套件 (PGTools PGCommon PGClip)
   
  ###目录规范
   - common/js  : 存放共有js文件，如PGTool.js
@@ -96,7 +97,7 @@
   - page : 存放页面内容，html,css，js在一个文件夹下,样式文件使用less添加css的命名空间，避免样式污染，
   - resource/css : 存放公共css（非页面使用级别）
   - resource/font : 公共字体资源
-  - resource/font : 公共图片资源
+  - resource/images : 公共图片资源
   - components : 组件，可以被Page调用，如menu组件
   - actions : 存放公共数据流action
   - stores  : 存放公共store
@@ -105,8 +106,14 @@
  ###脚手架使用
          
          
-           node createComponent [componentName]  [es5/es6]
+创建组件
+    
+       node createComponent [componentName] 
      
+创建页面      
+           
+       node createPage [componentPage] 
+           
   
  ###性能(开发&&运行)
  
@@ -119,10 +126,10 @@
 
   - vue-router 
   - vue template  
-  - es6
+  - es6(默认es6,兼容es5)
   - 组件脚手架
   - jquery  as  API 
-  - 通用套件
+  - 通用套件(PGTools PGCommon PGClip)
 
  ###目录规范
  
@@ -131,14 +138,19 @@
   - page : 存放vue文件，以页面为单位，
   - resource/css : 存放公共css（非页面使用级别）
   - resource/font : 公共字体资源
-  - resource/font : 公共图片资源
+  - resource/images : 公共图片资源
   - components : 组件，可以被Page调用，如menu组件
   
   
    ###脚手架使用
    
-         
-       node createComponent [componentName]  [es5/es6]
+创建组件
+    
+       node createComponent [componentName] 
+     
+创建页面      
+           
+       node createPage [componentPage] 
        
   
  ###性能(开发&&运行)
