@@ -69,13 +69,13 @@
 创建页面
         
          
-             node createPage [pageName] [relativePath]
+                 node createPage [pageName] [relativePath]
      
      
 创建组件 
              
              
-             node createWidget [WidgetName] 
+                 node createWidget [WidgetName] 
      
      
   
@@ -113,13 +113,13 @@
 
 
     
-         node createComponent [componentName] 
+               node createComponent [componentName] 
        
      
 创建页面      
 
            
-          node createPage [componentPage] 
+                node createPage [componentPage] 
            
   
  ###性能(开发&&运行)
