@@ -1,7 +1,36 @@
 构建工具负责提供整体解决方案，基于webpack, 分别包含jquery，react和vue三种方案；
 每个方案中包含依赖资源下载，资源引入方式，目录规范，编码规范，并且针对每个项目都提供了脚手架，方便快速开发
 
-####启动项目
+###环境安装
+  
+ - 安装node 
+     
+ - 安装yoeman : npm install -g yo 
+     
+ - 安装webpack: npm install -g webpack@2.1.0-beta.28
+     
+ - 安装server npm install -g webpack-dev-serve@2.2.0-rc.0
+
+ - 安装genetator-tools 
+     
+目前还是调试版本，所以请直接下载git项目，然后在项目目录下执行
+
+             
+         npm install   
+
+
+项目安装依赖之后执行
+
+    
+       npm link 
+     
+###创建一个项目
+  
+- mkdir Pro
+- cd pro 
+- yo pg-tools 
+
+###启动项目
    
     npm run dev 
 
@@ -12,11 +41,11 @@
     npm run pro 
     
     
-####访问项目
+###访问项目
 
 默认路由都是localhost:8080/#index 
 
-####调试 
+###调试 
 在源代码中可以直接debugger，断点会停在源代码中，而不是编译之后的bundle文件中，这个是依赖webpack中sourceMap；
 
 ##JQuery
@@ -24,25 +53,33 @@
  - 包含前端路由
  - 自选前端模板（目前只推荐handlebars，支持不包含模板方案）
  - 脚手架，用于创建页面(包含路由)，组件(widget)
- - es6（默认支持，建议使用）
-
+ - es6（默认es5，建议使用）
+ - 通用套件(PGTools PGCommon PGClip)
+ 
  ###目录规范
  - common/js  : 存放共有js文件，如PGTool.js
  - common/lib : 存放共有库文件，如jquery.js
  - page : 存放页面内容，html,css，js在一个文件夹下,样式文件使用less添加css的命名空间，避免样式污染，
  - resource/css : 存放公共css（非页面使用级别）
  - resource/font : 公共字体资源
- - resource/font : 公共图片资源
+ - resource/images : 公共图片资源
  - widget : 其他组件，可以被Page调用，如menu组件
  
  ###脚手架使用
+ 
+                 
+               
          
          
-          node createPage [pageName] [relativePath] [es5/es6]
+创建页面
+
+               node createPage [pageName] [relativePath]
+       
      
-     
-     
-             node createWidget [WidgetName] [es5/es6]
+创建组件      
+
+           
+                node createWidget [WidgetName] 
      
      
   
@@ -55,11 +92,11 @@
   - 自选数据流库，（包含reflux和redux，支持不选择）
   - 热更新
   - react-router 
-  - es6 
+  - es6(默认es6,兼容es5)
   - 组件脚手架
   - reflux  or redux 
   - jquery  as  API
-  - 通用套件 
+  - 通用套件 (PGTools PGCommon PGClip)
   
  ###目录规范
   - common/js  : 存放共有js文件，如PGTool.js
@@ -67,7 +104,7 @@
   - page : 存放页面内容，html,css，js在一个文件夹下,样式文件使用less添加css的命名空间，避免样式污染，
   - resource/css : 存放公共css（非页面使用级别）
   - resource/font : 公共字体资源
-  - resource/font : 公共图片资源
+  - resource/images : 公共图片资源
   - components : 组件，可以被Page调用，如menu组件
   - actions : 存放公共数据流action
   - stores  : 存放公共store
@@ -76,8 +113,18 @@
  ###脚手架使用
          
          
-           node createComponent [componentName]  [es5/es6]
+         
+         
+创建组件
+
+               node createComponent [componentName] 
+       
      
+创建页面      
+
+           
+                node createPage [componentPage] 
+           
   
  ###性能(开发&&运行)
  
@@ -90,10 +137,10 @@
 
   - vue-router 
   - vue template  
-  - es6
+  - es6(默认es6,兼容es5)
   - 组件脚手架
   - jquery  as  API 
-  - 通用套件
+  - 通用套件(PGTools PGCommon PGClip)
 
  ###目录规范
  
@@ -102,14 +149,21 @@
   - page : 存放vue文件，以页面为单位，
   - resource/css : 存放公共css（非页面使用级别）
   - resource/font : 公共字体资源
-  - resource/font : 公共图片资源
+  - resource/images : 公共图片资源
   - components : 组件，可以被Page调用，如menu组件
   
   
    ###脚手架使用
    
-         
-       node createComponent [componentName]  [es5/es6]
+创建组件
+    
+    
+           node createComponent [componentName] 
+     
+
+创建页面      
+           
+           node createPage [componentPage] 
        
   
  ###性能(开发&&运行)
