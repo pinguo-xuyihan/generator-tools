@@ -15,7 +15,8 @@
      
 目前还是调试版本，所以请直接下载git项目，然后在项目目录下执行
 
-          npm install   
+
+         npm install   
     
 
 
