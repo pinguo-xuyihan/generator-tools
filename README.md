@@ -66,6 +66,8 @@
  - widget : 其他组件，可以被Page调用，如menu组件
  
  ###脚手架使用
+ 
+ 
 创建页面
         
          
@@ -109,10 +111,10 @@
  ###脚手架使用
          
          
+         
+         
 创建组件
 
-
-    
                node createComponent [componentName] 
        
      
