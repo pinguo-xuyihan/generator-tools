@@ -1,17 +1,32 @@
 构建工具负责提供整体解决方案，基于webpack, 分别包含jquery，react和vue三种方案；
 每个方案中包含依赖资源下载，资源引入方式，目录规范，编码规范，并且针对每个项目都提供了脚手架，方便快速开发
 
+####环境安装
+  
+ - 安装node 
+     
+ - 安装yoeman : npm install -g yo 
+     
+ - 安装webpack: npm install -g webpack@2.1.0-beta.28
+     
+ - 安装server npm install -g webpack-dev-serve@2.2.0-rc.0
+
+ - 安装genetator-tools 
+     
 目前还是调试版本，所以请直接下载git项目，然后在项目目录下执行
 
-    npm install   
+     npm install   
     
 项目安装依赖之后执行
 
-    npm link 
-
+     npm link 
+     
 ####创建一个项目
   
-    
+- mkdir Pro
+- cd pro 
+- yo pg-tools 
+
 ####启动项目
    
     npm run dev 
