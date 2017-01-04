@@ -66,13 +66,16 @@
  - widget : 其他组件，可以被Page调用，如menu组件
  
  ###脚手架使用
-         
-         
+创建页面
+        
+         
              node createPage [pageName] [relativePath]
      
      
-     
-             node createWidget [WidgetName] 
+创建组件 
+             
+             
+             node createWidget [WidgetName] 
      
      
   
@@ -107,12 +110,16 @@
          
          
 创建组件
+
+
     
-       node createComponent [componentName] 
+         node createComponent [componentName] 
+       
      
 创建页面      
+
            
-       node createPage [componentPage] 
+          node createPage [componentPage] 
            
   
  ###性能(开发&&运行)
@@ -146,11 +153,13 @@
    
 创建组件
     
-       node createComponent [componentName] 
+    
+           node createComponent [componentName] 
      
+
 创建页面      
            
-       node createPage [componentPage] 
+           node createPage [componentPage] 
        
   
  ###性能(开发&&运行)
