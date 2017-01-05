@@ -18,6 +18,8 @@
     "object-assign": "^1.0.0"
   },<%}%>
   "devDependencies": {
+    "webpack" : "^2.1.0-beta.28",
+    "webpack-dev-server" : "2.2.0-rc.0" ,
     "loader-utils": "^0.2.16",
     "style-loader": "^0.13.1",
     "css-loader": "^0.26.1",
