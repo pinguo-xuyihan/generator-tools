@@ -30,6 +30,10 @@ module.exports = {
 				test: /\.less$/,
 				loader: "style-loader!css-loader!less-loader?strictMath&noIeCompat"
 			},
+			{ 
+				test: /\.(png|jpg)$/,    
+				loader: "url-loader?limit=10000" 
+			},
 			<%if(includeReact){%>
            	{ 	
 				test: /\.js$/, 
