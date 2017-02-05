@@ -11,7 +11,7 @@
      
  - 安装webpack: `npm install -g webpack@2.1.0-beta.28`
      
- - 安装server: `npm install -g webpack-dev-serve@2.2.0-rc.0`
+ - 安装server: `npm install -g webpack-dev-server@2.2.0-rc.0`
 
  - 安装genetator-tools 
      
