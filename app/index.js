@@ -484,6 +484,8 @@ if (appExist) {
 
               this.template( rootPath + 'createPage.js', 'createPage.js')
               this.template( rootPath + 'createWidget.js', 'createWidget.js');
+              this.template( rootPath + 'build.sh', 'build.sh');
+              this.template( rootPath + 'package.server.json', 'package.server.json');
 
               if(this.includeHandlebars){
                   this.copy( rootPath + 'index.handlebars'  , 'app/page/index/index.handlebars' );
